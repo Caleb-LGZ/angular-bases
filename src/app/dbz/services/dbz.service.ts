@@ -8,7 +8,6 @@ import { Character } from '../interfaces/character.interface';
     providedIn: 'root'
 })
 export class DbzService {
-    constructor() { }
 
     public characters: Character[] = [{
         id: uuid(),
@@ -24,7 +23,7 @@ export class DbzService {
         power: 7500
     }];
 
-    onNewCharacter(character: Character): void {
+    addCharacter(character: Character): void {
 
         const newCharacter: Character = { id: uuid(), ...character }
 
